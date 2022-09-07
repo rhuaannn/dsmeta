@@ -1,5 +1,7 @@
 import NotificationButton from '../NotificationButton'
 import './style.css'
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
 
 function SalesCard() {
     return (
@@ -8,10 +10,19 @@ function SalesCard() {
                 <h2 className="title-sales">Vendas</h2>
                 <div>
                     <div className="meta-form-container">
-                        <input className="form-control" type="text"/>
-                    </div>
+                        <DatePicker
+                            selected={new Date()}
+                            onChange={(date: Date) => { }}
+                            className="form-control"
+                            dateFormat="dd/MM/yyyy"
+                        />                    </div>
                     <div className="meta-form-container">
-                        <input className="form-control" type="text"/>
+                        <DatePicker
+                            selected={new Date()}
+                            onChange={(date: Date) => { }}
+                            className="form-control"
+                            dateFormat="dd/MM/yyyy"
+                        />
                     </div>
                 </div>
 
@@ -38,7 +49,7 @@ function SalesCard() {
                                 <th>R$ 100</th>
                                 <th>
                                     <div className="meta-btn-container">
-                                   <NotificationButton/>
+                                        <NotificationButton />
                                     </div>
                                 </th>
                             </tr>
@@ -51,7 +62,7 @@ function SalesCard() {
                                 <th>R$ 100</th>
                                 <th>
                                     <div className="meta-btn-container">
-                                    <NotificationButton/>
+                                        <NotificationButton />
                                     </div>
                                 </th>
                             </tr>
@@ -64,8 +75,7 @@ function SalesCard() {
                                 <th>R$ 100</th>
                                 <th>
                                     <div className="meta-btn-container">
-                                    <NotificationButton/>
-
+                                        <NotificationButton />
                                     </div>
                                 </th>
                             </tr>
